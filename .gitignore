@@ -1,0 +1,6 @@
+# Keep the output folder.
+/output/*
+!/output/.gitkeep
+
+# Ignore compiled files
+*.o
