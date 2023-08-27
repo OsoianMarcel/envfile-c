@@ -1,4 +1,4 @@
-#import "slice.h"
+#include "slice.h"
 
 Slice_t* slice_create(int cap) {
     Slice_t* slice = malloc(sizeof(Slice_t));
