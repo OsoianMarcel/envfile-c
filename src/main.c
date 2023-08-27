@@ -15,7 +15,7 @@ int main()
         return 1;
     }
 
-    log_debug("len: %zu; cap: %zu;\n", envf->len, envf->cap);
+    log_debug("len: %zu; cap: %zu;", envf->len, envf->cap);
     for (size_t i = 0; i < envf->len; i++)
     {
         EnvF_Var_t *var = envf->vars[i];
@@ -26,6 +26,8 @@ int main()
     log_debug("find: %s", found);
 
     envf_deinit(envf);
+
+    log_info("End.");
 
     return EXIT_SUCCESS;
 }
