@@ -5,7 +5,7 @@ static void free_envf_var(EnvF_Var_t *env_var);
 static void push_envf_var(EnvF_t *envf_inst, EnvF_Var_t *var);
 static char reclaim_envf_var(EnvF_t *envf_inst);
 
-enum ENVF_ERROR envf_init(char *file_name, EnvF_t **envf_inst)
+ENVF_ERROR_t envf_init(char *file_name, EnvF_t **envf_inst)
 {
     FILE *file = fopen(file_name, "r");
     if (file == NULL)

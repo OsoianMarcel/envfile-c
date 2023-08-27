@@ -9,7 +9,7 @@ int main()
     log_info("Start.");
 
     EnvF_t *envf = NULL;
-    enum ENVF_ERROR err = envf_init("filename2.txt", &envf);
+    ENVF_ERROR_t err = envf_init("filename2.txt", &envf);
     if (err != UNKNOWN_ERROR) {
         log_error("Unable to initialize envf. Error: %d", err);
         return 1;
