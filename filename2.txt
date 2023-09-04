@@ -1,2 +1,4 @@
+ENV=development
 ABC=1
-env=3
+LOVE=C
+ALWAYS=LEARN

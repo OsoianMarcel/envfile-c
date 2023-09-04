@@ -22,8 +22,11 @@ int main()
         log_debug("%zu: %s=%s", i, var->name, var->value);
     }
 
-    char *found = envf_val(envf, "env");
-    log_debug("find: %s", found);
+    char *found = envf_get(envf, "ENV");
+    log_debug("found: %s", found);
+
+    char *notFound = envf_get(envf, "inexistent");
+    log_debug("not found: %s", notFound);
 
     envf_deinit(envf);
 
