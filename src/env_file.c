@@ -37,6 +37,12 @@ ENVF_ERROR_t envf_init(char *file_name, EnvF_t **envf_inst)
         // Reading the variable name.
         if (rf == 0)
         {
+            // Reset char carret on each new line.
+            if (c == '\n') {
+                i = 0;
+                continue;
+            }
+
             if (i >= ENVF_VAR_NAME_MAX_LEN)
             {
                 log_error("Env variable name is too long (len: %d).", i);
